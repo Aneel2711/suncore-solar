@@ -1,1 +1,0 @@
-# suncore-solar
