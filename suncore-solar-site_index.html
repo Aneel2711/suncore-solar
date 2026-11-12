@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SunCore Solar — Clean Energy. Greener Future.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: {
+            forest: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .tree-canopy-bg {
+      background-image:
+        radial-gradient(circle at 12% 18%, rgba(16, 185, 129, 0.08) 0%, transparent 42%),
+        radial-gradient(circle at 88% 12%, rgba(5, 150, 105, 0.07) 0%, transparent 40%),
+        radial-gradient(circle at 80% 85%, rgba(16, 185, 129, 0.06) 0%, transparent 45%);
+    }
+    .leaf-border {
+      border-radius: 24px 4px 24px 4px;
+    }
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 8px;
+      border-radius: 999px;
+      background: #d1fae5;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      background: #059669;
+      border: 3px solid #ffffff;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.35);
+      margin-top: -7px;
+    }
+  </style>
+</head>
+<body class="bg-white text-forest-900 antialiased selection:bg-forest-100 selection:text-forest-900">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-forest-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 bg-forest-600 text-white leaf-border flex items-center justify-center shadow-sm group-hover:bg-forest-700 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 16.95l-1.414 1.414m12.728 0l-1.414-1.414M7.05 7.05L5.636 5.636M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+          </svg>
+        </div>
+        <span class="font-extrabold text-xl tracking-tight text-forest-900">SunCore<span class="text-forest-600">Solar</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-forest-800">
+        <a href="#solutions" class="hover:text-forest-600 transition">Solutions</a>
+        <a href="#calculator" class="hover:text-forest-600 transition">Savings</a>
+        <a href="#process" class="hover:text-forest-600 transition">How It Works</a>
+        <a href="#reviews" class="hover:text-forest-600 transition">Reviews</a>
+      </nav>
+
+      <a href="#quote" class="bg-forest-600 hover:bg-forest-700 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-sm transition">
+        Free Quote
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden tree-canopy-bg pt-12 pb-20 lg:pt-20 lg:pb-28">
+    <!-- Subtle Tree Silhouette Decoration -->
+    <svg class="hidden lg:block absolute -left-16 bottom-0 w-72 h-72 text-forest-500/10 pointer-events-none" viewBox="0 0 200 200" fill="currentColor">
+      <circle cx="90" cy="110" r="65"/>
+      <circle cx="140" cy="130" r="45"/>
+      <circle cx="45" cy="135" r="40"/>
+      <rect x="84" y="155" width="12" height="45"/>
+    </svg>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center gap-2 bg-forest-50 border border-forest-200 text-forest-700 text-xs font-bold px-3.5 py-1.5 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-forest-500 animate-pulse"></span>
+          30% Federal Tax Credit Available
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight leading-[1.1] text-forest-900">
+          Power Your Home.<br/>
+          <span class="text-forest-600">Protect the Canopy.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-forest-800/80 max-w-lg leading-relaxed">
+          High-efficiency solar panels installed in one day. Slash monthly bills by up to 80% while offsetting tons of CO₂.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 pt-1">
+          <a href="#quote" class="bg-forest-600 hover:bg-forest-700 text-white font-bold px-7 py-3.5 rounded-full shadow-md shadow-forest-600/20 transition">
+            Get Instant Estimate
+          </a>
+          <a href="#calculator" class="bg-white hover:bg-forest-50 text-forest-800 border border-forest-200 font-bold px-6 py-3.5 rounded-full transition">
+            Calculate Savings
+          </a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-forest-100 max-w-md">
+          <div>
+            <p class="text-2xl font-extrabold text-forest-700">25 Yrs</p>
+            <p class="text-xs font-medium text-forest-800/70">Panel Warranty</p>
+          </div>
+          <div>
+            <p class="text-2xl font-extrabold text-forest-700">$0 Down</p>
+            <p class="text-xs font-medium text-forest-800/70">Easy Financing</p>
+          </div>
+          <div>
+            <p class="text-2xl font-extrabold text-forest-700">4.9 ★</p>
+            <p class="text-xs font-medium text-forest-800/70">2,400+ Homes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6">
+        <div class="relative bg-white p-3 rounded-3xl border border-forest-100 shadow-xl shadow-forest-900/5">
+          <img src="./images/hero-solar.svg" alt="Modern eco-friendly solar home surrounded by green trees" class="w-full h-auto rounded-2xl object-cover" />
+          <div class="absolute -bottom-4 left-6 bg-white border border-forest-100 shadow-lg rounded-2xl px-4 py-3 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-forest-50 text-forest-600 flex items-center justify-center font-bold">🌿</div>
+            <div>
+              <p class="text-xs font-extrabold text-forest-900">100% Eco-Powered</p>
+              <p class="text-[11px] text-forest-700">Equals 140+ trees planted yearly</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions Section -->
+  <section id="solutions" class="py-20 bg-white border-t border-forest-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-forest-600">Clean Energy Suite</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-forest-900 mt-2">Tailored Solar Solutions</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="group bg-white border border-forest-100 rounded-3xl overflow-hidden hover:border-forest-300 hover:shadow-xl hover:shadow-forest-900/5 transition">
+          <div class="h-48 overflow-hidden bg-forest-50">
+            <img src="./images/home-solar.svg" alt="Residential rooftop solar panels" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="inline-block text-xs font-bold text-forest-700 bg-forest-50 px-3 py-1 rounded-full mb-3">Residential</span>
+            <h3 class="text-xl font-bold text-forest-900">Home Solar</h3>
+            <p class="text-sm text-forest-800/75 mt-2 leading-relaxed">Sleek black-on-black panels built for maximum roof output and clean curb appeal.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group bg-white border border-forest-100 rounded-3xl overflow-hidden hover:border-forest-300 hover:shadow-xl hover:shadow-forest-900/5 transition">
+          <div class="h-48 overflow-hidden bg-forest-50">
+            <img src="./images/battery-storage.svg" alt="Smart home solar battery storage" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="inline-block text-xs font-bold text-forest-700 bg-forest-50 px-3 py-1 rounded-full mb-3">24/7 Backup</span>
+            <h3 class="text-xl font-bold text-forest-900">Battery Storage</h3>
+            <p class="text-sm text-forest-800/75 mt-2 leading-relaxed">Store daytime sunshine to keep lights and appliances running through any outage.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group bg-white border border-forest-100 rounded-3xl overflow-hidden hover:border-forest-300 hover:shadow-xl hover:shadow-forest-900/5 transition">
+          <div class="h-48 overflow-hidden bg-forest-50">
+            <img src="./images/commercial-ev.svg" alt="Commercial solar and EV charging" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="inline-block text-xs font-bold text-forest-700 bg-forest-50 px-3 py-1 rounded-full mb-3">Business & EV</span>
+            <h3 class="text-xl font-bold text-forest-900">Commercial & EV</h3>
+            <p class="text-sm text-forest-800/75 mt-2 leading-relaxed">Fast Level-2 EV charging and commercial arrays with rapid tax depreciation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator -->
+  <section id="calculator" class="py-20 bg-forest-50/60 border-y border-forest-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-3xl border border-forest-100 shadow-lg p-6 sm:p-10 grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-forest-600">Interactive Estimator</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-forest-900 mt-1">See Your Solar & Tree Impact</h2>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex justify-between items-center">
+              <label for="billRange" class="text-sm font-semibold text-forest-800">Current Monthly Electric Bill</label>
+              <span id="billValue" class="text-2xl font-extrabold text-forest-600">$220</span>
+            </div>
+            <input id="billRange" type="range" min="80" max="650" step="10" value="220" class="w-full" />
+            <div class="flex justify-between text-xs text-forest-800/60 font-medium">
+              <span>$80/mo</span>
+              <span>$350/mo</span>
+              <span>$650/mo</span>
+            </div>
+          </div>
+
+          <div class="flex gap-2">
+            <button type="button" data-sun="1.15" class="sun-btn flex-1 py-2.5 px-3 rounded-xl text-xs font-bold border border-forest-600 bg-forest-600 text-white transition">High Sun</button>
+            <button type="button" data-sun="1.0" class="sun-btn flex-1 py-2.5 px-3 rounded-xl text-xs font-bold border border-forest-200 bg-white text-forest-800 hover:bg-forest-50 transition">Moderate Sun</button>
+            <button type="button" data-sun="0.88" class="sun-btn flex-1 py-2.5 px-3 rounded-xl text-xs font-bold border border-forest-200 bg-white text-forest-800 hover:bg-forest-50 transition">Partial Shade</button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 bg-forest-900 text-white rounded-2xl p-6 sm:p-8 space-y-6">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white/10 rounded-xl p-4">
+              <p class="text-xs text-forest-200">Est. Monthly Savings</p>
+              <p id="monthlySave" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">$176</p>
+            </div>
+            <div class="bg-white/10 rounded-xl p-4">
+              <p class="text-xs text-forest-200">25-Year Savings</p>
+              <p id="totalSave" class="text-2xl sm:text-3xl font-extrabold text-forest-200 mt-1">$52,800</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between border-t border-white/15 pt-4 text-sm">
+            <div>
+              <p class="text-forest-200 text-xs">Recommended System</p>
+              <p id="systemSize" class="font-bold text-base">7.6 kW Array</p>
+            </div>
+            <div class="text-right">
+              <p class="text-forest-200 text-xs">Annual Forest Equivalent</p>
+              <p id="treesSaved" class="font-bold text-base text-forest-200">🌲 148 Trees / yr</p>
+            </div>
+          </div>
+
+          <a href="#quote" class="block text-center bg-forest-500 hover:bg-forest-600 text-white font-bold py-3 rounded-xl transition">
+            Lock In This Estimate →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Step Process -->
+  <section id="process" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-lg mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-forest-600">Simple & Fast</span>
+        <h2 class="text-3xl font-extrabold text-forest-900 mt-2">Go Solar in 3 Steps</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-7 rounded-3xl border border-forest-100 bg-forest-50/30">
+          <div class="w-11 h-11 rounded-2xl bg-forest-600 text-white font-extrabold flex items-center justify-center mb-4">1</div>
+          <h3 class="text-lg font-bold text-forest-900">Custom Roof Design</h3>
+          <p class="text-sm text-forest-800/75 mt-2">Satellite modeling maps your exact sunlight and savings in 24 hours.</p>
+        </div>
+
+        <div class="p-7 rounded-3xl border border-forest-100 bg-forest-50/30">
+          <div class="w-11 h-11 rounded-2xl bg-forest-600 text-white font-extrabold flex items-center justify-center mb-4">2</div>
+          <h3 class="text-lg font-bold text-forest-900">Permits Handled</h3>
+          <p class="text-sm text-forest-800/75 mt-2">We manage city approvals, utility interconnection, and tax paperwork.</p>
+        </div>
+
+        <div class="p-7 rounded-3xl border border-forest-100 bg-forest-50/30">
+          <div class="w-11 h-11 rounded-2xl bg-forest-600 text-white font-extrabold flex items-center justify-center mb-4">3</div>
+          <h3 class="text-lg font-bold text-forest-900">1-Day Installation</h3>
+          <p class="text-sm text-forest-800/75 mt-2">Certified engineers install your system cleanly and activate live app tracking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="py-16 bg-forest-50/50 border-t border-forest-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-7 rounded-3xl border border-forest-100">
+          <p class="text-forest-600 font-bold text-sm">★★★★★</p>
+          <p class="text-forest-900 font-medium mt-3 leading-relaxed">“Our electric bill dropped from $260 to $14 a month. Clean installation and zero hassle.”</p>
+          <p class="text-xs font-bold text-forest-700 mt-4">— Elena R., Austin TX</p>
+        </div>
+        <div class="bg-white p-7 rounded-3xl border border-forest-100">
+          <p class="text-forest-600 font-bold text-sm">★★★★★</p>
+          <p class="text-forest-900 font-medium mt-3 leading-relaxed">“The battery backup kept our entire house running seamlessly during a winter storm.”</p>
+          <p class="text-xs font-bold text-forest-700 mt-4">— Marcus T., Denver CO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote CTA Form -->
+  <section id="quote" class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="bg-forest-900 text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
+        <div class="relative z-10 text-center max-w-lg mx-auto mb-8">
+          <h2 class="text-3xl font-extrabold">Get Your Free Solar Quote</h2>
+          <p class="text-forest-200 text-sm mt-2">No pressure. Receive a custom roof layout and savings report.</p>
+        </div>
+
+        <form id="quoteForm" class="relative z-10 grid sm:grid-cols-2 gap-4">
+          <input type="text" required placeholder="Full Name" class="w-full px-4 py-3.5 rounded-xl bg-white text-forest-900 placeholder-forest-800/50 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-forest-500" />
+          <input type="email" required placeholder="Email Address" class="w-full px-4 py-3.5 rounded-xl bg-white text-forest-900 placeholder-forest-800/50 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-forest-500" />
+          <input type="text" required placeholder="ZIP Code" class="w-full px-4 py-3.5 rounded-xl bg-white text-forest-900 placeholder-forest-800/50 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-forest-500" />
+          <button type="submit" class="w-full bg-forest-500 hover:bg-forest-600 text-white font-bold py-3.5 rounded-xl transition shadow-md">
+            Send My Quote
+          </button>
+        </form>
+
+        <p id="formSuccess" class="hidden relative z-10 text-center text-sm font-bold text-forest-200 bg-white/10 rounded-xl py-3 px-4 mt-4">
+          ✓ Request received! Your custom solar design will arrive shortly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-forest-100 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-forest-800/70">
+      <div class="flex items-center gap-2 font-bold text-forest-900">
+        <span class="w-2.5 h-2.5 rounded-full bg-forest-600"></span>
+        SunCore Solar © 2026
+      </div>
+      <div class="flex gap-6">
+        <a href="#solutions" class="hover:text-forest-600">Solutions</a>
+        <a href="#calculator" class="hover:text-forest-600">Calculator</a>
+        <a href="#quote" class="hover:text-forest-600">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const billRange = document.getElementById('billRange');
+    const billValue = document.getElementById('billValue');
+    const monthlySave = document.getElementById('monthlySave');
+    const totalSave = document.getElementById('totalSave');
+    const systemSize = document.getElementById('systemSize');
+    const treesSaved = document.getElementById('treesSaved');
+    const sunBtns = document.querySelectorAll('.sun-btn');
+
+    let sunMultiplier = 1.15;
+
+    function updateCalc() {
+      const bill = Number(billRange.value);
+      billValue.textContent = `$${bill}`;
+      const mSave = Math.round(bill * 0.72 * sunMultiplier);
+      const y25Save = mSave * 12 * 25;
+      const kw = ((bill / 28) * (2 - sunMultiplier * 0.7)).toFixed(1);
+      const trees = Math.round(mSave * 0.84);
+
+      monthlySave.textContent = `$${mSave.toLocaleString()}`;
+      totalSave.textContent = `$${y25Save.toLocaleString()}`;
+      systemSize.textContent = `${kw} kW Array`;
+      treesSaved.textContent = `🌲 ${trees} Trees / yr`;
+    }
+
+    billRange.addEventListener('input', updateCalc);
+
+    sunBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sunBtns.forEach(b => {
+          b.classList.remove('bg-forest-600', 'text-white', 'border-forest-600');
+          b.classList.add('bg-white', 'text-forest-800', 'border-forest-200');
+        });
+        btn.classList.remove('bg-white', 'text-forest-800', 'border-forest-200');
+        btn.classList.add('bg-forest-600', 'text-white', 'border-forest-600');
+        sunMultiplier = Number(btn.dataset.sun);
+        updateCalc();
+      });
+    });
+
+    document.getElementById('quoteForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('formSuccess').classList.remove('hidden');
+      e.target.reset();
+    });
+
+    updateCalc();
+  </script>
+</body>
+</html>
